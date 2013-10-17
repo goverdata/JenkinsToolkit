@@ -3,7 +3,7 @@
 release=$1
 version=$2
 rpmName=[RPM-NAME]-$release
-packageName=rampapi
+packageName=[RPM_NAME]
 
 expectRPM=`rpm -qa | grep expect`
 if [ -z $expectRPM ] ; then
@@ -46,7 +46,6 @@ if [ -z $jdkintall ]; then
       "
 fi
 
-# install ramp.api
 expect -c "set timeout 10000
       spawn yum install $rpmName
        expect {

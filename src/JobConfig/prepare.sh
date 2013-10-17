@@ -17,7 +17,7 @@ if [ ! -f $targetPath ] ; then
 fi
 
 echo ">>>Try to Clean enviroment"
-rpmName=Eagle.ramp.api
+rpmName=[RPM_NAME]
 
 rpmSource=/tmp/$rpmName
 
@@ -33,7 +33,7 @@ echo ">>>>>>Clean complete"
 # Before clean
 rm -rf *.rpm
 
-_rpmBuild $rpmSource $rpmName $release $version $commonJenkinsHOME/RAMP_Build/rpm/rpmgen.cent63 $commonJenkinsHOME/RAMP_Build/rpm/dependency.list.Eagle.ramp.api $commonJenkinsHOME
+_rpmBuild $rpmSource $rpmName $release $version $commonJenkinsHOME/RAMP_Build/rpm/rpmgen.cent63 $commonJenkinsHOME/RAMP_Build/rpm/[DEPENDENCY_FILE] $commonJenkinsHOME
 
 _uploadRpm
 
