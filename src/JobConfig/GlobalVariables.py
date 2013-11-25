@@ -8,8 +8,8 @@ import string, os, sys
 #value = sys.argv[2]
 
 buildNum = os.getenv('BUILD_NUMBER') 
-key = "RAMP_WEB_1_2_RPM"
-value = "Eagle.ramp.web-1.2-" + buildNum + "-centos6.3_64.rpm"
+key = "RPM_NAME"
+value = "RAMP_NAME_VALUE-" + buildNum + "-centos6.3_64.rpm"
 print "key = " + key
 print "value = " + value 
 
